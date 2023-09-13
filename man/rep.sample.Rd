@@ -6,7 +6,15 @@
 
 \description{This command simulates repeated samples given fixed data of the exogenous predictors and given (true) regression parameters. For each sample generated the results from an OLS regression with level parameter and confidence- as well as prediction intervals are calculated.}
 
-\usage{rep.sample(x, true.par, omit = 0, mean = 0, sd = 1, rep = 100, xnew = x, sig.level = 0.05, seed = NULL)}
+\usage{rep.sample(x,
+    true.par,
+    omit = 0,
+    mean = 0,
+    sd = 1,
+    rep = 100,
+    xnew = x,
+    sig.level = 0.05,
+    seed = NULL)}
 
 \arguments{
   \item{x}{(n x k) vector or matrix of exogenous data, where each column represents the data of one of k exogenous predictors. The number of rows represents the sample size n.}
@@ -77,14 +85,17 @@ out = rep.sample(x, true.par = c(2,1,4), rep = 10)
 # Extract some data
 out$coef[2,8] # Extract estimated beta1 (i.e. 2nd coeff) in the 8th sample
 out$coef["beta1","SMPL8"] # Same as above using internal names
-out$confint["beta1","upper","SMPL5"] # Extract only upper bound of confidence interval of beta 1 from 5th sample
-out$confint[,,5] # Extract confidence intervals (upper and lower bound) for all parameters from 5th sample
+out$confint["beta1","upper","SMPL5"] # Extract only upper bound of
+                                     # confidence interval of beta 1 from 5th sample
+out$confint[,,5] # Extract confidence intervals (upper and lower bound)
+                 # for all parameters from 5th sample
 out$confint[,,"SMPL5"] # Same as above using internal names
 out$confint["beta1",,"SMPL5"] # Extract confidence interval of beta 1 from 5th sample
 out$u.hat[,"SMPL7"] # Extract residuals from OLS estimation of sample 7
 
 # Generate prediction intervals at three specified points of exogenous data (xnew)
-out = rep.sample(x, true.par = c(2,1,4), rep = 10, xnew = cbind(x1 = c(1.5, 6, 7), x2 = c(1, 3, 5.5)))
+out = rep.sample(x, true.par = c(2,1,4), rep = 10, 
+    xnew = cbind(x1 = c(1.5, 6, 7), x2 = c(1, 3, 5.5)))
 out$predint[,,6] # Prediction intervals at the three data points of xnew in 6th sample
 out$sd.pe[,6] # Estimated standard deviations of prediction errors in 6th sample
 out$outside.pi # Percentage of how many intervals miss true y0 realization
@@ -102,8 +113,10 @@ mean(out.biased$coef["beta1",]) # not approx. equal to beta1 = 1
 out.biased$bias.coef # show the true bias in coefficients
 
 # Simulate a regression with given correlation structure in exogenous data
-corr.mat = cbind(c(1, 0.9),c(0.9, 1)) # Generate desired correlation structure (high autocorrelation)
-X = makedata.corr(n = 10, k = 2, CORR = corr.mat) # Generate 10 observations of 2 exogenous variables
+corr.mat = cbind(c(1, 0.9),c(0.9, 1)) # Generate desired correlation
+                                      # structure (high autocorrelation)
+X = makedata.corr(n = 10, k = 2, CORR = corr.mat) # Generate 10 observations
+                                                  # of 2 exogenous variables
 out = rep.sample(X, true.par = c(2,1,4), rep = 1) # Simulate a regression
 out$vcov.coef
 

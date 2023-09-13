@@ -7,7 +7,12 @@
 \description{Performs an F-test (non-directional) on multiple (L) linear combinations of parameters in a linear model.}
 
 \usage{
-f.coef.test(mod, data = list(), nh, q = rep(0, dim(nh)[1]), sig.level = 0.05, details = FALSE, hyp = TRUE)
+f.coef.test(mod, data = list(),
+    nh, q = rep(0,
+    dim(nh)[1]),
+    sig.level = 0.05,
+    details = FALSE,
+    hyp = TRUE)
 }
 
 \arguments{

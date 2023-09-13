@@ -39,20 +39,20 @@ Calculates the predicted values of a linear model based on specified values of t
 }
 
 \examples{
-  # Estimate logarithmic model
-  fert.est <- ols(barley ~ phos + nit, data = log(data.fertilizer))
-  
-  # Set new x data
-  my.mat = cbind(x1 = log(c(6,3,9)), x2 = log(c(5,3,10)))
+## Estimate logarithmic model
+fert.est <- ols(barley ~ phos + nit, data = log(data.fertilizer))
 
-  # Returns fitted values
-  ols.predict(fert.est)
-  
-  # Returns predicted values at new x-values
-  ols.predict(fert.est, xnew = my.mat)
+## Set new x data
+my.mat = cbind(x1 = log(c(6,3,9)), x2 = log(c(5,3,10)))
 
-  # Returns re-transformed predicted values and est. var. of pred. error
-  ols.predict(fert.est, xnew = my.mat, antilog = T, details = TRUE)
+## Returns fitted values
+ols.predict(fert.est)
+
+## Returns predicted values at new x-values
+ols.predict(fert.est, xnew = my.mat)
+
+## Returns re-transformed predicted values and est. var. of pred. error
+ols.predict(fert.est, xnew = my.mat, antilog = TRUE, details = TRUE)
 }
 
 \keyword{predicted values, linear model}

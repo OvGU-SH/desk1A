@@ -71,19 +71,39 @@ ivr(contr ~ score, endog = "score", iv = "contrprev", data = data.insurance, det
 # Stata example
 library(foreign)
 data.educwages <- read.dta("http://www.stata-press.com/data/r12/educwages.dta")
-ivr(wages ~ union + education, endog = "education", iv = c("meducation", "feducation"), data = data.educwages)
+ivr(wages ~ union + education,
+    endog = "education",
+    iv = c("meducation", "feducation"),
+    data = data.educwages)
 
 # Replicating Murray (2006) Table 14.1 (page 612)
-data.graddy = read.table("http://wps.aw.com/wps/media/objects/2387/2445250/Data_Sets/ASCII/whiting.csv", header = TRUE, sep = ",")
-ivr(QTY ~ PRICE, endog = c("PRICE"), iv = "WINDSPD", details = TRUE, data = data.graddy)
+# downloaded from:
+# http://wps.aw.com/wps/media/objects/2387/2445250/Data_Sets/ASCII/whiting.csv
+data.graddy = read.table(system.file("whiting.csv", package = "desk"),
+                         header = TRUE, sep = ",")
+                         
+ivr(QTY ~ PRICE,
+    endog = c("PRICE"),
+    iv = "WINDSPD",
+    details = TRUE,
+    data = data.graddy)
 
 # Replicating Murray (2006) Table 14.3 (page 622-623)
 endog = c("PRICE")
 iv = c("WINDSPD","WINDSPD2", "STORMY", "COLD", "RAINY", "MIXED")
-ivr(QTY ~ PRICE + DAY1 + DAY2 + DAY3 + DAY4, endog = endog, iv = iv, details = TRUE, data = data.graddy)
+ivr(QTY ~ PRICE + DAY1 + DAY2 + DAY3 + DAY4,
+    endog = endog,
+    iv = iv,
+    details = TRUE,
+    data = data.graddy)
+
 endog = c("QTY")
 iv = iv = c("DAY1", "DAY2", "DAY3", "DAY4")
-ivr(PRICE ~ QTY + WINDSPD + WINDSPD2 + STORMY + COLD + RAINY + MIXED, endog = endog, iv = iv, details = TRUE, data = data.graddy)
+ivr(PRICE ~ QTY + WINDSPD + WINDSPD2 + STORMY + COLD + RAINY + MIXED,
+    endog = endog,
+    iv = iv,
+    details = TRUE,
+    data = data.graddy)
 
 # Demand and supply estimation (Kmenta, 1971)
 

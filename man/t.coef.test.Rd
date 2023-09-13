@@ -7,7 +7,14 @@
 \description{Performs a t-test on a single paramter hypothesis or a hypothesis containing
 a linear combination of parameters of a linear model. The object of test results returned by this command can be plotted using the \code{plot() function}.}
 
-\usage{t.coef.test(mod, data = list(), nh, q = 0, dir = c("both", "left", "right"), sig.level = 0.05, details = FALSE, hyp = TRUE)
+\usage{t.coef.test(mod,
+    data = list(),
+    nh,
+    q = 0,
+    dir = c("both", "left", "right"),
+    sig.level = 0.05,
+    details = FALSE,
+    hyp = TRUE)
 }
 
 \arguments{

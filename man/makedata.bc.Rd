@@ -32,9 +32,16 @@ transformed by a normalized, lambda-deformed logarithm (aka. Box-Cox-transformat
 # Compare 4 datasets generated differently
 par(mfrow = c(2,2))
 A.dat <- makedata.bc(a = 3) # linear data shifted by 3
-B.dat <- makedata.bc(lambda.y = 0, n = 100, sigma = 0.2, x.max = 3, seed = 123) # log transformed y-data
+B.dat <- makedata.bc(lambda.y = 0,
+    n = 100,
+    sigma = 0.2,
+    x.max = 3,
+    seed = 123) # log transformed y-data
 C.dat <- makedata.bc(lambda.y = 6, sigma = 0.4, seed = 12) # concave scatter
-D.dat <- makedata.bc(lambda.x = 0, lambda.y = 6, sigma = 0.4, seed = 12) # concave scatter, x transf.
+D.dat <- makedata.bc(lambda.x = 0,
+    lambda.y = 6,
+    sigma = 0.4,
+    seed = 12) # concave scatter, x transf.
 plot(A.dat, main = "linear data shifted by 3")
 plot(B.dat, main = "log transformed y-data")
 plot(C.dat, main = "concave scatter")

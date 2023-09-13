@@ -1,28 +1,37 @@
-\name{data.milk {desk}}
-\alias{data.milk}
 \docType{data}
-\title{
-Milk Production
-}
-\description{
-This is a data set on the use of concentrated feed for cows and their milk output.
-}
-\usage{data.milk}
+
+\name{data.milk}
+
+\alias{data.milk}
+
+\title{Milk Production}
+
 \format{
-  A data frame with 12 observations on the following two variables:
-  \describe{
-    \item{feed}{Concentrated feed given to the cow (in units of 50kg per year).}
-    \item{milk}{Milk output of the cow (in litres per year).}
-  }
+A data frame with 12 observations on the following two variables:
+\tabular{ll}{
+\code{feed} \tab concentrated feed given to the cow (in units of 50kg per year).\cr
+\code{milk} \tab milk output of the cow (in liters per year).\cr
 }
-\details{
-In Auer, L von (2016, Chap. 14) and Auer, L. von, S. Hoffmann (2017, Chap. 14) these hypothetical data are used to illustrate the functional specification of a regression model.
 }
+
 \source{
-Auer, L. von (2016) \emph{Oekonometrie - Eine Einfuehrung}, 7th ed., Springer-Gabler (\url{http://www.oekonometrie-lernen.de}).
+Auer, L.v. (2023): Ökonometrie - Eine Einführung, 8th ed., Springer-Gabler (\href{https://www.uni-trier.de/index.php?id=15929}{https://www.oekonometrie-lernen.de}).
 }
+
+\usage{
+data.milk
+}
+
+\description{
+This is a hypothetical data set on the use of concentrated feed for cows and their milk output.
+}
+
+\details{
+In Auer (2023, Chap. 14) and Auer et al. (2023, Chap. 14) these hypothetical data are used to illustrate transformations in non-linear relationships.
+}
+
 \references{
-Auer, L. von, S. Hoffmann (2017) \emph{Oekonometrie - Das R-Arbeitsbuch}, Springer-Gabler (\url{http://www.oekonometrie-lernen.de}).
+Auer, L.v., Hoffmann, S. & Kranz, T. (2023): Ökonometrie - Das R-Arbeitsbuch, 2nd ed., Springer-Gabler (\href{https://www.uni-trier.de/index.php?id=15929}{https://www.oekonometrie-lernen.de}).
 }
 
 \keyword{datasets}

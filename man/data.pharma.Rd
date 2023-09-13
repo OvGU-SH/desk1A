@@ -1,30 +1,39 @@
-\name{data.pharma {desk}}
-\alias{data.pharma}
 \docType{data}
-\title{
-Pharmaceutical Advertisements
+
+\name{data.pharma}
+
+\alias{data.pharma}
+
+\title{Pharmaceutical Advertisements}
+
+\format{
+A data frame with 24 quarterly observations on the following four variables:
+\tabular{ll}{
+\code{sales} \tab sales of pharmaceutical product (in units of 100g).\cr
+\code{ads} \tab number of advertisements (in double pages).\cr
+\code{price} \tab price of pharmaceutical product (in euro per 100g).\cr
+\code{adsprice} \tab price of advertisements (in units of 1000 euro per double page).\cr
 }
+}
+
+\source{
+Auer, L.v. (2023): Ökonometrie - Eine Einführung, 8th ed., Springer-Gabler (\href{https://www.uni-trier.de/index.php?id=15929}{https://www.oekonometrie-lernen.de}).
+}
+
+\usage{
+data.pharma
+}
+
 \description{
 This is a data set on quarterly commercials data of a pharmaceutical company.
 }
-\usage{data.pharma}
-\format{
-  A data frame with 24 quarterly observations on the following four variables:
-  \describe{
-    \item{sales}{Sales of pharmaceutical product (in units of 100g).}
-    \item{ads}{Number of advertisements (in double pages).}
-    \item{price}{Price of pharmaceutical product (in euro per 100g).}
-    \item{adsprice}{Price of advertisements (in units of 1000 euro per double page).}
-  }
-}
+
 \details{
-In Auer, L von (2016, Chap. 23) and Auer, L. von, S. Hoffmann (2017, Chap. 23) these hypothetical data are used to illustrate the estimation of simultaneous equation econometric models.
+In Auer (2023, Chap. 23) and Auer et al. (2023, Chap. 23) these hypothetical data are used to illustrate the estimation of simultaneous equation econometric models.
 }
-\source{
-Auer, L. von (2016) \emph{Oekonometrie - Eine Einfuehrung}, 7th ed., Springer-Gabler (\url{http://www.oekonometrie-lernen.de}).
-}
+
 \references{
-Auer, L. von, S. Hoffmann (2017) \emph{Oekonometrie - Das R-Arbeitsbuch}, Springer-Gabler (\url{http://www.oekonometrie-lernen.de}).
+Auer, L.v., Hoffmann, S. & Kranz, T. (2023): Ökonometrie - Das R-Arbeitsbuch, 2nd ed., Springer-Gabler (\href{https://www.uni-trier.de/index.php?id=15929}{https://www.oekonometrie-lernen.de}).
 }
 
 \keyword{datasets}

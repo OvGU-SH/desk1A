@@ -10,7 +10,12 @@ Box Cox test for functional form. Compares a base model with non transformed end
 }
 
 \usage{
-bc.test(basemod, data = list(), exo = "same", sig.level = 0.05, details = TRUE, hyp = TRUE)
+bc.test(basemod,
+    data = list(),
+    exo = "same",
+    sig.level = 0.05,
+    details = TRUE,
+    hyp = TRUE)
 }
 
 \arguments{

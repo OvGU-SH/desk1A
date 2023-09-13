@@ -7,7 +7,12 @@
 \description{Breusch Pagan test for heteroskedastic errors. The object of test results returned by this command can be plotted using the \code{plot() function}.}
 
 \usage{
-bp.test(mod, data = list(), varmod = NULL, koenker = TRUE, sig.level = 0.05, details = FALSE, hyp = TRUE) 
+bp.test(mod, data = list(),
+    varmod = NULL,
+    koenker = TRUE,
+    sig.level = 0.05,
+    details = FALSE,
+    hyp = TRUE) 
 }
 \arguments{
  \item{mod}{Estimated linear model object or formula.}

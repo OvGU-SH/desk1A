@@ -31,13 +31,14 @@
 }
 
 \examples{
-  # Estimate model.
-  unemp.est <- ols(unempl ~ gdp, data = data.unempl[1:14,])
-  
-  # Test for immediate structural break after t = 13
-  X <- pc.test(unemp.est, split = 13, details = T)
-  X
-  plot(X)
-  }
-  
+## Estimate model
+unemp.est <- ols(unempl ~ gdp, data = data.unempl[1:14,])
+
+## Test for immediate structural break after t = 13
+X <- pc.test(unemp.est, split = 13, details = TRUE)
+X
+
+plot(X)
+}
+
 \keyword{structural break, chow test, prognostic chow test}

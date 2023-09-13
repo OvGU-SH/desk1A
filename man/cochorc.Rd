@@ -8,7 +8,12 @@
 If autocorrelated errors can be modeled by an AR(1) process (rho as parameter) then this function performs a Cochrane Orcutt iteration. If model coefficients and the estimated rho value converge with the number of iterations, this procedure provides valid solutions. The object returned by this command can be plotted using the \code{plot() function}.
 }
 
-\usage{cochorc(mod, data = list(), iter = 10, tol = 0.0001, pwt = TRUE, details = FALSE)}
+\usage{cochorc(mod,
+    data = list(),
+    iter = 10,
+    tol = 0.0001,
+    pwt = TRUE,
+    details = FALSE)}
 
 \arguments{
   \item{mod}{Estimated linear model object or formula.}
@@ -73,7 +78,10 @@ print(X, details = FALSE)
 plot(X)
 
 # Replicate Table 11.3 and 11.7 from Murray (2006)
-data.murray = read.table("http://wps.aw.com/wps/media/objects/2387/2445250/Data_Sets/ASCII/poverty1.csv", header = TRUE, sep = ",")
+# downloaded from:
+# http://wps.aw.com/wps/media/objects/2387/2445250/Data_Sets/ASCII/poverty1.csv
+data.murray = read.table(system.file("poverty1.csv", package = "desk"),
+                         header = TRUE, sep = ",")
 poverty.est <- ols(POVERTY ~ UNEMPLOY, data = data.murray)
 cochorc(poverty.est, iter = 30, tol = 0.000001)
 

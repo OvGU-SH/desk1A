@@ -1,9 +1,13 @@
-import("stats", "graphics", "foreign")
-#useDynLib("desk")
+import("stats",
+       "graphics",
+       "cli",
+       "grDevices",
+       "utils")
+
+S3method(plot,desk)
+S3method(print,desk)
 
 export(
-  .onAttach,
-  .onLoad,
   acc,
   ar1sim,
   arguments,

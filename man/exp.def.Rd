@@ -8,6 +8,10 @@
 Calculates the lambda deformed exponential.
 }
 
+%\usage{
+%\method{exp}{def}(x, lambda = 0, normalize = FALSE)
+%}
+
 \usage{exp.def(x, lambda = 0, normalize = FALSE)}
 
 \arguments{

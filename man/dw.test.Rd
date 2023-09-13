@@ -7,7 +7,14 @@
 \description{Durbin-Watson Test on AR(1) autocorrelation of errors in a linear model. The object of test results returned by this command can be plotted using the \code{plot() function}.}
 
 \usage{
-dw.test(mod, data = list(), dir = c("left", "right", "both"), method = c("pan1", "pan2", "paol", "spa"), crit.val = TRUE, sig.level = 0.05, details = FALSE, hyp = TRUE)
+dw.test(mod,
+    data = list(),
+    dir = c("left", "right", "both"),
+    method = c("pan1", "pan2", "paol", "spa"),
+    crit.val = TRUE,
+    sig.level = 0.05,
+    details = FALSE,
+    hyp = TRUE)
 }
 
 \arguments{

@@ -1,28 +1,37 @@
-\name{data.ballb {desk}}
-\alias{data.ballb}
 \docType{data}
-\title{
-Defective Ball Bearings
-}
-\description{
-This is a data set on the percentage of rejects in the production of ball bearings.
-}
-\usage{data.ballb}
+
+\name{data.ballb}
+
+\alias{data.ballb}
+
+\title{Defective Ball Bearings}
+
 \format{
-  A data frame with seven observations on the following two variables:
-  \describe{
-    \item{defbb}{Share of defective ball bearings (per thousand).}
-    \item{nshifts}{Number of shifts between two maintenances.}
-  }
+A data frame with seven observations on the following two variables:
+\tabular{ll}{
+\code{defbb} \tab share of defective ball bearings (per thousand).\cr
+\code{nshifts} \tab number of shifts between two maintenances.\cr
 }
-\details{
-In Auer, L. von (2016, Chap. 16) and Auer, L. von, S. Hoffmann (2017, Chap. 16) these hypothetical data are used to illustrate the consequences of error terms with an expected value deviating from zero.
 }
+
 \source{
-Auer, L. von (2016) \emph{Oekonometrie - Eine Einfuehrung}, 7th ed., Springer-Gabler (\url{http://www.oekonometrie-lernen.de}).
+Auer, L.v. (2023): Ökonometrie - Eine Einführung, 8th ed., Springer-Gabler (\href{https://www.uni-trier.de/index.php?id=15929}{https://www.oekonometrie-lernen.de}).
 }
+
+\usage{
+data.ballb
+}
+
+\description{
+This is a data set on the percentage of defective units in the production of ball bearings.
+}
+
+\details{
+In Auer (2023, Chap. 16) and Auer et al. (2023, Chap. 16) these hypothetical data are used to illustrate the consequences of error terms with an expected value deviating from zero.
+}
+
 \references{
-Auer, L. von, S. Hoffmann (2017) \emph{Oekonometrie - Das R-Arbeitsbuch}, Springer-Gabler (\url{http://www.oekonometrie-lernen.de}).
+Auer, L.v., Hoffmann, S. & Kranz, T. (2023): Ökonometrie - Das R-Arbeitsbuch, 2nd ed., Springer-Gabler (\href{https://www.uni-trier.de/index.php?id=15929}{https://www.oekonometrie-lernen.de}).
 }
 
 \keyword{datasets}

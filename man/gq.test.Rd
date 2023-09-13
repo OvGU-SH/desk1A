@@ -7,7 +7,14 @@
 \description{Goldfeld-Quandt test for heteroskedastic errors. The object of test results returned by this command can be plotted using the \code{plot() function}.}
 
 \usage{
-gq.test(mod, data = list(), split = 0.5, omit.obs = 0, ah = c("increasing", "unequal", "decreasing"), order.by = NULL, sig.level = 0.05, details = FALSE, hyp = TRUE)
+gq.test(mod, data = list(),
+    split = 0.5,
+    omit.obs = 0,
+    ah = c("increasing", "unequal", "decreasing"),
+    order.by = NULL,
+    sig.level = 0.05,
+    details = FALSE,
+    hyp = TRUE)
 }
 
 \arguments{

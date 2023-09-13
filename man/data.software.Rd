@@ -1,27 +1,38 @@
-\name{data.software {desk}}
-\alias{data.software}
 \docType{data}
-\title{
-Employment Data of a Software Company
-}
-\description{
-This is a data set on business data of a software company covering 36 consecutive months.
-}
-\usage{data.software}
+
+\name{data.software}
+
+\alias{data.software}
+
+\title{Employment Data of a Software Company}
+
 \format{
-  A data frame with 36 observations on the following two variables:
-  \describe{
-    \item{empl}{Number of employees in the observed month.}
-    \item{orders}{Number of new orders during the observed month.}
-  }
+A data frame with 36 observations on the following three variables:
+\tabular{ll}{
+\code{period} \tab identifies the time period. \cr
+\code{empl} \tab number of employees in the observed month.\cr
+\code{orders} \tab number of new orders during the observed month.\cr
 }
-\details{
-In Auer, L von (2016, Chap. 22) and Auer, L. von, S. Hoffmann (2017, Chap. 22) these hypothetical data are used to illustrate the estimation of dynamic regression models.
 }
+
 \source{
-Auer, L. von (2016) \emph{Oekonometrie - Eine Einfuehrung}, 7th ed., Springer-Gabler (\url{http://www.oekonometrie-lernen.de}).
+Auer, L.v. (2023): Ökonometrie - Eine Einführung, 8th ed., Springer-Gabler (\href{https://www.uni-trier.de/index.php?id=15929}{https://www.oekonometrie-lernen.de}).
 }
+
+\usage{
+data.software
+}
+
+\description{
+This is a hypothetical (time series) data set on business data of a software company covering 36 consecutive months.
+}
+
+\details{
+In Auer (2023, Chap. 22) and Auer et al. (2023, Chap. 22) these hypothetical data are used to illustrate the estimation of dynamic regression models.
+}
+
 \references{
-Auer, L. von, S. Hoffmann (2017) \emph{Oekonometrie - Das R-Arbeitsbuch}, Springer-Gabler (\url{http://www.oekonometrie-lernen.de}).
+Auer, L.v., Hoffmann, S. & Kranz, T. (2023): Ökonometrie - Das R-Arbeitsbuch, 2nd ed., Springer-Gabler (\href{https://www.uni-trier.de/index.php?id=15929}{https://www.oekonometrie-lernen.de}).
 }
+
 \keyword{datasets}

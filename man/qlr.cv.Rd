@@ -1,39 +1,40 @@
 \name{qlr.cv}
-
 \alias{qlr.cv}
-
-\title{Critical values of the Quandt Liekelihood Ratio test (QLR-test)}
-
-\description{Returns critical values of the Quandt Liekelihood Ratio test according to Andrews (2003)}
-
+\title{Calculates the critical value in a Quandt Likelihood Ratio-Test for Structural Breaks in a Parameter with Unknown Break Date}
 \usage{
-  qlr.cv(tAll, t0 = round(0.15*tAll), t1 = round(0.85*tAll), L = 2, sig.level = list(0.05, 0.01, 0.1))
-  }
-
+qlr.cv(tAll, from = round(0.15*tAll), to = round(0.85*tAll),
+L = 2, sig.level = list(0.05, 0.01, 0.1))
+}
 \arguments{
-  \item{tAll}{Total number of periods}
-  \item{t0}{Startperiod for Chow-F-Statistics}
-  \item{t1}{Endperiod for Chow-F-Statistics}
-  \item{L}{Number of break parameters (linear combinations) to be tested.}
-  \item{sig.level}{Significance level. Valid values are: 0.01, 0.05 or 0.1}
+\item{tAll}{sample size.}
+\item{from}{start period of range to be analyzed for a break.}
+\item{to}{end period of range to be analyzed for a break.}
+\item{L}{number of parameters.}
+\item{sig.level}{significance level. Allowed values are 0.01, 0.05 or 0.10.}
 }
-
-\value{List including:
-
+\value{
+A list object including:
 \tabular{ll}{
-\code{lambda} \tab Lambda value correcting the critical value according to \code{range}.\cr
-\code{range} \tab Selected range of periods in \code{tAll}.\cr
-\code{cv.chi2} \tab Interval of critical chi^2 QLR-Values\cr
-\code{cv.f} \tab Interval of critical F QLR-Values\cr
+\code{lambda} \tab	the lambda correction value for the critical value.\cr
+\code{range} \tab range of values.\cr
+\code{cv.chi2} \tab	critical value of chi^2-test statistics.\cr
+\code{cv.f} \tab critical value of F-test statistics.\cr
 }
 }
 
-\references{
-Andrews (2003), Donald W. K, Tests for Parameter Instability and Structural Change with Unknown Change Point: A Corrigendum. \emph{Econometrica}, \bold{71}, 395-397.
+\description{
+Calculates critical values for Quandt Likelihood Ratio-test (QLR) for structural breaks with unknown break date.
 }
-
 \examples{
-qlr.cv(tAll = 60)
-}
+qlr.cv(20, L = 2, sig.level = 0.01)
 
-\keyword{Quandt Likelihood Ratio, QLR, critical value, structural break}
+}
+\references{
+Quandt, R.E. (1960): Tests of the Hypothesis That a Linear Regression Obeys Two Separate Regimes. Journal of the American Statistical Association 55, 324–30.
+
+Hansen, B. (1996): “Inference When a Nuisance Parameter is Not Identified under the Null Hypothesis,” Econometrica,
+64, 413–430.
+}
+\concept{Quandt Likelihod Ratio test}
+\concept{structural break}
+\concept{unknown breakdate}

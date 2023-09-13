@@ -1,4 +1,4 @@
-print.desk = function (x, details, digits = 4, ...){
+print.desk = function (x, details = FALSE, digits = 4, ...){
   
   obj = x
   if (missing(details)) {details = attr(obj, "details")}

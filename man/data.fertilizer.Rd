@@ -1,29 +1,38 @@
-\name{data.fertilizer {desk}}
 \docType{data}
+
+\name{data.fertilizer}
+
 \alias{data.fertilizer}
-\title{
-Fertilizer in the Cultivation of Barley
-}
-\description{
-This is a data set on the use of fertilizers (phospate and nitrogen) in the cultivation of barley.
-}
-\usage{data.fertilizer}
+
+\title{Fertilizer in the Cultivation of Barley}
+
 \format{
-  A data frame with 30 observations on the following three variables:
-  \describe{
-    \item{phos}{Amount of phosphate (in kg per hectare).}
-    \item{nit}{Amount of nitrogen (in kg per hectare).}
-    \item{barley}{Barley crop yield (in units of 100 kg per hectare).}
-  }
+A data frame with 30 observations on the following three variables:
+\tabular{ll}{
+\code{phos} \tab amount of phosphate (in kg per hectare).\cr
+\code{nit} \tab amount of nitrogen (in kg per hectare).\cr
+\code{barley} \tab barley crop yield (in units of 100 kg per hectare).\cr
 }
-\details{
-In Auer, L von (2016, Chap. 9) and Auer, L. von, S. Hoffmann (2017, Chap. 9) these hypothetical data are used to illustrate the estimation of a multivariate linear regression model.
 }
+
 \source{
-Auer, L. von (2016) \emph{Oekonometrie - Eine Einfuehrung}, 7th ed., Springer-Gabler (\url{http://www.oekonometrie-lernen.de}).
+Auer, L.v. (2023): Ökonometrie - Eine Einführung, 8th ed., Springer-Gabler (\href{https://www.uni-trier.de/index.php?id=15929}{https://www.oekonometrie-lernen.de}).
 }
+
+\usage{
+data.fertilizer
+}
+
+\description{
+This is a data set on the use of fertilizers (phosphate and nitrogen) in the cultivation of barley.
+}
+
+\details{
+In Auer (2023, Chap. 9) and Auer et al. (2023, Chap. 9). These hypothetical data are used to illustrate the estimation of a multivariate linear regression model.
+}
+
 \references{
-Auer, L. von, S. Hoffmann (2017) \emph{Oekonometrie - Das R-Arbeitsbuch}, Springer-Gabler (\url{http://www.oekonometrie-lernen.de}).
+Auer, L.v., Hoffmann, S. & Kranz, T. (2023): Ökonometrie - Das R-Arbeitsbuch, 2nd ed., Springer-Gabler (\href{https://www.uni-trier.de/index.php?id=15929}{https://www.oekonometrie-lernen.de}).
 }
 
 \keyword{datasets}

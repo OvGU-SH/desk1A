@@ -1,32 +1,39 @@
-\name{data.windscreen {desk}}
-\alias{data.windscreen}
 \docType{data}
-\title{
-Efficiency of a Car Glass Service Company
+
+\name{data.windscreen}
+
+\alias{data.windscreen}
+
+\title{Efficiency of a Car Glass Service Company}
+
+\format{
+A data frame with 248 observations on the following eight variables:
+\tabular{ll}{
+\code{screen} \tab number of windscreen replacements in the branch.\cr
+\code{foreman} \tab foremen employed in the branch.\cr
+\code{assist} \tab assistants employed in the branch.\cr
+\code{f_wage} \tab foremen's average wage in the branch.\cr
+\code{a_wage} \tab assistants' average wage in the branch.\cr
+\code{f_age} \tab foremen's average age in the branch.\cr
+\code{a_age} \tab assistants' average age in the branch.\cr
+\code{capital} \tab total value of machines used for windscreen replacement in the branch (in euro).\cr
 }
+}
+
+\source{
+Auer, L.v., Hoffmann, S. & Kranz, T. (2023): Ökonometrie - Das R-Arbeitsbuch, 2nd ed., Springer-Gabler (\href{https://www.uni-trier.de/index.php?id=15929}{https://www.oekonometrie-lernen.de}).
+}
+
+\usage{
+data.windscreen
+}
+
 \description{
 This is a data set on the business statistics of 248 branches of a car glass service company in 2015.
 }
-\usage{data.windscreen}
-\format{
-  A data frame with 248 observations on the following eight variables:
-  \describe{
-    \item{screen}{Number of windscreen replacements in the branch.}
-    \item{foreman}{Foremen employed in the branch.}
-    \item{assist}{Assistants employed in the branch.}
-    \item{f_wage}{Foremen's average wage in the branch.}
-    \item{a_wage}{Assistants' average wage in the branch.}
-    \item{f_age}{Foremen's average age in the branch.}
-    \item{a_age}{Assistants' average age in the branch.}
-    \item{capital}{Total value of machines used for windscreen replacement in the branch (in euro).}
-  }
-}
+
 \details{
-In Auer, L. von, S. Hoffmann (2017, Chap. 20) these data illustrate the use of two stage least squares estimation with instrumental variables.
+In Auer et al. (2023, Chap. 20) these hypothetical data illustrate the use of two stage least squares estimation with instrumental variables.
 }
-\source{
-Auer, L. von, S. Hoffmann (2017) \emph{Oekonometrie - Das R-Arbeitsbuch}, Springer-Gabler (\url{http://www.oekonometrie-lernen.de}).
-}
-\references{
-}
+
 \keyword{datasets}
